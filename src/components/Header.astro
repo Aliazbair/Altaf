@@ -1,0 +1,51 @@
+---
+import { NavLinks } from '../data/Data';
+---
+
+<header
+  class='flex items-center justify-between p-2 bg-gradient-to-r from-purple-500 to-indigo-500 '
+>
+  <!-- left -->
+  <div class='flex items-center space-x-5'>
+    <a href='/'>
+      <img src='/logo.jpg' class='w-16 h-16 object-cover rounded-full' alt='' />
+    </a>
+  </div>
+
+  <!-- right -->
+  <!-- desktop menu -->
+  <ul class='md:flex items-center hidden'>
+    {
+      NavLinks.map(({ title, url }) => (
+        <li class='text-[20px] mr-2 font-semibold  '>
+          <a
+            href={url}
+            class='text-white hover:text-gray-200 transition-all duration-300'
+          >
+            {title}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+
+  <!-- mobile menu -->
+  <div class="hidden">
+    <img src="/menu.svg" class="block bg-white cursor-pointer" alt="">
+    <ul class='md:hidden flex flex-col justify-center shadow-md bg-red-500 shadow-gray-800 p-5 items-center '>
+    {
+      NavLinks.map(({ title, url }) => (
+        <li class='text-[20px] mr-2 font-semibold  '>
+          <a
+            href={url}
+            class='text-white hover:text-gray-200 transition-all duration-300'
+          >
+            {title}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+
+  </div>
+</header>
