@@ -5,14 +5,14 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
 // import Posts from '../components/Posts.astro';
-import Text from '../components/Text.astro';
-import Info from '../components/Info.astro';
-import Vision from '../components/Vision.astro';
+
 import Gols from '../components/Gols.astro';
 import Works from '../components/Works.astro';
 import Teams from '../components/Teams.astro';
 import Services from '../components/Servrices.astro';
 import Pricing from '../components/Pricing.astro';
+import Images from '../components/Images.astro';
+import WrappScetion from '../components/WrappScetion.astro';
 ---
 
 <Layout title='الطاف'>
@@ -21,27 +21,46 @@ import Pricing from '../components/Pricing.astro';
   <!-- hero -->
   <Hero />
   <main>
-    <Info />
-    <Vision />
+    <!-- about us -->
+
+    <WrappScetion
+      classes=' bg-red-500'
+      title='من هي الطاف'
+      description={`     الطاف هو
+      موقع إلكتروني متخصص في مجال التشطيب والترميم، حيث يوفر خدمات تشطيب المنازل
+      والمكاتب والمحلات التجارية بأسلوب متميز وفريد يضمن الحصول على النتيجة المرجوة.
+      يتميز الموقع بفريق من الخبراء والمهندسين المحترفين الذين يعملون بجدية وكفاءة
+      عالية لتحويل تصاميم العملاء إلى واقع ملموس يفوق توقعاتهم. ويتميز الموقع بالتعامل
+      الشفاف مع العملاء، حيث يتم تقديم تفاصيل دقيقة وشفافة حول تكاليف الخدمات وجدولة
+      العمل وأي تحديثات مستقبلية. إذا كنت تبحث عن خدمات تشطيب وترميم متميزة واحترافية،
+      فإن الطاف 
+    هو المكان المناسب لتلبية احتياجاتك وتحقيق أهدافك.`}
+    />
+    <Images />
+    <!-- vesion -->
+    <WrappScetion
+      classes='bg-indigo-900'
+      title='روؤيتنا'
+      description={`
+    روؤية "الطاف" هي أن نصبح الشركة الرائدة في مجال التشطيب والترميم على المستوى
+    العالمي، حيث يتميز عملنا بالجودة العالية والاحترافية والتميز في التصميم
+    والتنفيذ. نسعى لتحقيق رضى عملائنا وتلبية احتياجاتهم وتجاوز توقعاتهم في جميع
+    خدماتنا، ونحرص على الابتكار والتطوير المستمر للحفاظ على مكانتنا الرائدة في
+    السوق. ونحن نعمل بأخلاقيات مهنية عالية ونسعى لتوفير بيئة عمل جاذبة ومحفزة
+    للإبداع والإنتاجية لفريقنا. ونحن نؤمن بأهمية دورنا في تحسين جودة حياة الناس
+    عن طريق تحويل منازلهم ومكاتبهم إلى أماكن أكثر جمالاً وراحة وعملية.`}
+    />
+
     <Gols />
     <Works />
+
     <Teams />
     <Services />
     <Pricing />
 
-    <section class='flex justify-between py-10 gap-4 px-10'>
-      <div
-        class='bg-clip-border p-6 bg-violet-600 border-4 border-violet-300 border-solid rounded-md'
-      >
-      </div>
-      <div
-        class='bg-clip-padding p-6 bg-violet-600 border-4 border-violet-300 border-dashed'
-      >
-      </div>
-      <div
-        class='bg-clip-content p-6 bg-violet-600 border-4 border-violet-300 border-dashed'
-      >
-      </div>
-    </section>
+
+
+
+
   </main>
 </Layout>
