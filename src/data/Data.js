@@ -13,7 +13,7 @@ export const NavLinks = [
   },
   {
     title: 'باقات التشطيب',
-    url: '',
+    url: '/pricing',
   },
   {
     title: ' من نحن',
